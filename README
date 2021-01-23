@@ -129,7 +129,7 @@ Servo:
 
 3. i2s_wavefile.py
    It will read 'file.wav' and print what you said in 'file.wav'.
-   Then you can type "aplay file.wav" to here what you said.
+   Then you can type "aplay file.wav" to hear what you said.
 
 4. i2s_lcd.py
    When prompt "say stop to exit",
