@@ -64,7 +64,7 @@ vi /etc/asound.conf
 sudo \rm /etc/alsa/conf.d/*
 sudo vi /usr/share/alsa/alsa.conf  ( commented out pcm.cards and 21 lines below it )
 sudo pip3 install --upgrade adafruit-python-shell
-curl -sS https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/i2samp.sh | bash
+curl -sS https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/i2samp.sh | bash ( enter y N y y )
 reboot
 sudo vi /boot/config.txt ( delete dtoverlay=hifiberry-dac )
 sync
@@ -150,6 +150,19 @@ Servo:
 -----------------------------------------------------------------------------
 
 Here are the procedure to test the above 6 tests:
+I2S_Mic:
+   Connect gpio pin 35 to LRCL.
+   Connect gpio pin 38 to DOUT.
+   Connect gpio pin 12 to BCLK.
+   Connect gpio pin 9 to GND.
+   Connect gpio pin 1 to 3V.
+I2S_AMP:
+   Connect gpio pin 35 to LRC.
+   Connect gpio pin 40 to DIN.
+   Connect gpio pin 12 to BCLK.
+   Connect gpio pin 9 to GND.
+   Connect gpio pin 2 to Vin.
+   Connect 8 ohm speaker to screw-terminal.
 
 To clean alsamixer settings:
 sudo \rm /var/lib/alsa/asound.state
