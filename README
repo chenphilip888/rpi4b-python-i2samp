@@ -1,12 +1,13 @@
 Python i2s experiments on Raspberry PI 4B board.
 
-The following 6 tests are included: ( see below for tests summary )
+The following 7 tests are included: ( see below for tests summary )
 1. speech_recog.py
 2. sound_recorder.py
 3. i2s_wavefile.py
 4. i2s_lcd.py
 5. i2s_servo.py
 6. piano.py
+7. littlestar.py
 
 -------------------------------------------------------------------
 
@@ -146,10 +147,13 @@ Servo:
 
 6. piano.py
    Push keyboard 'z'-'.', 'a'-'l', 'q'-'o', '1'-'9', esc to quit.
+   
+7. littlestar.py
+   Play little star song.
 
 -----------------------------------------------------------------------------
 
-Here are the procedure to test the above 6 tests:
+Here are the procedure to test the above 7 tests:
 I2S_Mic:
    Connect gpio pin 35 to LRCL.
    Connect gpio pin 38 to DOUT.
@@ -193,6 +197,7 @@ cd ~/rpi4b-python-i2samp
 ./i2s_lcd.py
 ./i2s_servo.py
 sudo ./piano.py
+sudo ./littlestar.py
 
 When done all tests:
 sudo shutdown -h now
