@@ -1,6 +1,6 @@
 Python i2s experiments on Raspberry PI 4B board.
 
-The following 7 tests are included: ( see below for tests summary )
+The following 8 tests are included: ( see below for tests summary )
 1. speech_recog.py
 2. sound_recorder.py
 3. i2s_wavefile.py
@@ -8,6 +8,7 @@ The following 7 tests are included: ( see below for tests summary )
 5. i2s_servo.py
 6. piano.py
 7. littlestar.py
+8. playmidi.py
 
 -------------------------------------------------------------------
 
@@ -50,7 +51,7 @@ sudo apt-get upgrade
 sync
 sudo reboot
 ./nosleep.sh
-sudo apt-get install python-dev python-pip python-setuptools python3-dev python3-pip python3-setuptools dnsutils apache2 vsftpd ftp pavucontrol libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev libasound2-dev flac python-smbus ffmpeg mpg123 libffi-dev
+sudo apt-get install python-dev python-pip python-setuptools python3-dev python3-pip python3-setuptools dnsutils apache2 vsftpd ftp pavucontrol libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev libasound2-dev flac python-smbus ffmpeg mpg123 libffi-dev python-pygame
 sync
 Because pulseaudio cannot work with i2smic we need to remove pulseaudio.
 sudo apt-get remove --purge pulseaudio
@@ -150,10 +151,13 @@ Servo:
    
 7. littlestar.py
    Play little star song.
+   
+8. playmidi.py
+   Play midi song.
 
 -----------------------------------------------------------------------------
 
-Here are the procedure to test the above 7 tests:
+Here are the procedure to test the above 8 tests:
 I2S_Mic:
    Connect gpio pin 35 to LRCL.
    Connect gpio pin 38 to DOUT.
@@ -198,6 +202,7 @@ cd ~/rpi4b-python-i2samp
 ./i2s_servo.py
 sudo ./piano.py
 sudo ./littlestar.py
+./playmidi.py
 
 When done all tests:
 sudo shutdown -h now
