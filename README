@@ -1,6 +1,6 @@
 Python i2s experiments on Raspberry PI 4B board.
 
-The following 9 tests are included: ( see below for tests summary )
+The following 10 tests are included: ( see below for tests summary )
 1. speech_recog.py
 2. sound_recorder.py
 3. i2s_wavefile.py
@@ -10,6 +10,7 @@ The following 9 tests are included: ( see below for tests summary )
 7. littlestar.py
 8. playmidi.py
 9. kusc_fmradio.sh
+10. youtube_audio.sh
 
 -------------------------------------------------------------------
 
@@ -63,6 +64,7 @@ sudo pip install SpeechRecognition
 sudo pip install sounddevice
 sudo pip install soundfile
 sudo pip install numpy
+sudo pip install youtube_dl
 vi /etc/asound.conf
 sudo \rm /etc/alsa/conf.d/*
 sudo vi /usr/share/alsa/alsa.conf  ( commented out pcm.cards and 21 lines below it )
@@ -158,10 +160,13 @@ Servo:
    
 9. kusc_fmradio.sh
    Play real time KUSC FM Radio station.
+   
+10. youtube_audio.sh
+    Play youtube audio.
 
 -----------------------------------------------------------------------------
 
-Here are the procedure to test the above 9 tests:
+Here are the procedure to test the above 10 tests:
 I2S_Mic:
    Connect gpio pin 35 to LRCL.
    Connect gpio pin 38 to DOUT.
@@ -208,6 +213,7 @@ sudo ./piano.py
 sudo ./littlestar.py
 ./playmidi.py
 ./kusc_fmradio.sh
+./youtube_audio.sh
 
 When done all tests:
 sudo shutdown -h now
