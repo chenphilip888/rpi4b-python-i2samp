@@ -204,6 +204,7 @@ aplay /usr/share/sounds/alsa/Front_Center.wav
 mpg123 http://ice1.somafm.com/u80s-128-mp3
 
 cd ~/rpi4b-python-i2samp
+chmod 755 *.py *.sh
 ./speech_recog.py
 ./sound_recorder.py
 ./i2s_wavefile.py
